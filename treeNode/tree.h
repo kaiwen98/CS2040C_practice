@@ -28,6 +28,7 @@ public:
 	int findNumSpace(int);
 	int findTreeHeight();
 	bool exist(int a);
+	int findSuccessor(int a);
 
 	
 	void printZero(int);
@@ -44,6 +45,13 @@ public:
 	void printTreeRot(treeNode* node, bool printHeight);
 	void printNode(treeNode* node, bool printHeight);
 
+
+	treeNode* avlBalance(treeNode* node);
+	treeNode* avlBalance() {return avlBalance(root);}
+	treeNode* balanceNode(treeNode* node);
+	treeNode* left_rotate(treeNode*);
+	treeNode* right_rotate(treeNode*);
+
 };
 
 
@@ -57,6 +65,6 @@ public:
 	int val;
 	treeNode* left;
 	treeNode* right;
-
+	
 	friend ostream &operator<<(ostream&, treeNode*);
 };

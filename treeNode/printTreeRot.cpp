@@ -5,6 +5,8 @@
 using namespace std;
 
 void tree::printTreeRot(treeNode* node, bool printHeight) {
+	if (node == NULL) return;
+
 	if(node->right != NULL) printTreeRot(node->right, printHeight);
 	if(node != NULL) printNode(node, printHeight);
 	if(node->left != NULL) printTreeRot(node->left, printHeight);
