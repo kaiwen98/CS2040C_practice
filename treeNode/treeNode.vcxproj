@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="avlBalance.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="printTreeRot.cpp" />
     <ClCompile Include="tree.cpp" />

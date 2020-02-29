@@ -30,6 +30,9 @@
     <ClCompile Include="printTreeRot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="avlBalance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tree.h">
