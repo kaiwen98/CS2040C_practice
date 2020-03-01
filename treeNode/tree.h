@@ -76,7 +76,7 @@ public:
 	friend ostream &operator<<(ostream&, treeNode*);
 
 
-protected:
+private:
 	bool containNum;
 	int val;
 	treeNode* left;

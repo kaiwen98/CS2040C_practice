@@ -15,16 +15,16 @@ int main() {
 	//test(q1);
 	//int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
 	//int arr[10] = { 7,3,11,1,5,0,2,4,6 };
-	//int arr[11] = { 0,7,14,21,28,35,42,49,56,63,70 };
+	int arr[11] = { 0,7,14,21,28,35,42,49,56,63,70 };
 
-	int arr[15] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
-	testTree(&t1, arr, 6);
+	//int arr[15] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+	testTree(&t1, arr, 11);
 	//t1.reverseOrderTrasversal();
 
 	cout << endl << endl;
 	t1.printTreeRot(true);
 	cout << endl << endl;
-	t1.printTree();
+	//t1.printTree();
 	cout << endl << endl;
 	//int num = 14;
 	//cout << num;  (t1.exist(num) == true) ? cout << " exists" << endl : cout << " do not exist" << endl;
@@ -39,7 +39,7 @@ int main() {
 	cout << endl << endl;
 	t1.printTree();
 	cout << endl << endl;
-	t1.printTreeRot(false);
+	t1.printTreeRot(true);
 	//t1.inOrderTrasversal();
 
 	//cout << "Lowest val is " << t1.findLowestVal(t1.root) << endl;
