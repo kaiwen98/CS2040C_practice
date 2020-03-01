@@ -1,13 +1,16 @@
 #pragma once
 #include <iostream>
 #include "queue.h"
+
 using namespace std;
 
+template <class T>
 class treeNode;
 
+template <class T>
 class tree {
 private:
-	treeNode* root;
+	treeNode<T>* root;
 
 public:
 	//Constructor and destructor
@@ -16,69 +19,74 @@ public:
 
 	//Trasversal functions with print
 	void inOrderTrasversal() { inOrderTrasversal(root); }
-	void inOrderTrasversal(treeNode*);
+	void inOrderTrasversal(treeNode<T>*);
 
 	void preOrderTrasversal() { preOrderTrasversal(root); }
-	void preOrderTrasversal(treeNode*);
+	void preOrderTrasversal(treeNode<T>*);
 
 	void postOrderTrasversal() { postOrderTrasversal(root); }
-	void postOrderTrasversal(treeNode*);
+	void postOrderTrasversal(treeNode<T>*);
 
 	void reverseOrderTrasversal() { reverseOrderTrasversal(root); }
-	void reverseOrderTrasversal(treeNode*);
+	void reverseOrderTrasversal(treeNode<T>*);
 
 	//BST Operations
-	treeNode* insertTreeNode(int a, treeNode*);
-	treeNode* insertTreeNode(int a) { return insertTreeNode(a, root); }
+	treeNode<T>* insertTreeNode(T a, treeNode<T>*);
+	treeNode<T>* insertTreeNode(T a) { return insertTreeNode(a, root); }
 	void printTree();
-	int findMaxVal();
-	int findMinVal();
-	int findLowestVal(treeNode*);
-	int findLowestVal() { return findLowestVal(root); }
+	T findMaxVal();
+	T findMinVal();
+	T findLowestVal(treeNode<T>*);
+	T findLowestVal() { return findLowestVal(root); }
 	int findTreeHeight();
-	bool exist(int a);
-	int findSuccessor(int a);
+	bool exist(T a);
+	T findSuccessor(T a);
 
 	//Print vertical
 	int findNumSpace(int);
-	void printTreeFromQueue(queue<treeNode*>* q1);
-	void enqueue(treeNode* node, queue<treeNode*>* q1);
+	void printTreeFromQueue(queue<treeNode<T>*>* q1);
+	void enqueue(treeNode<T>* node, queue<treeNode<T>*>* q1);
 
 
 	//Print horizontal
-	void printTreeRot(treeNode* node, bool printHeight);
+	void printTreeRot(treeNode<T>* node, bool printHeight);
 	void printTreeRot(bool printHeight) { printTreeRot(root, printHeight); }
-	void printNode(treeNode* node, bool printHeight);
+	void printNode(treeNode<T>* node, bool printHeight);
 
 	//Support functions
 	void printZero(int);
 	void printVert(int, int, queue<int>&);
 	
 	//AVL Balancing
-	treeNode* avlBalance(treeNode* node);
-	treeNode* avlBalance() { return avlBalance(root); }
-	treeNode* balanceNode(treeNode* node);
-	treeNode* left_rotate(treeNode*);
-	treeNode* right_rotate(treeNode*);
+	treeNode<T>* avlBalance(treeNode<T>* node);
+	treeNode<T>* avlBalance() { return avlBalance(root); }
+	treeNode<T>* balanceNode(treeNode<T>* node);
+	treeNode<T>* left_rotate(treeNode<T>*);
+	treeNode<T>* right_rotate(treeNode<T>*);
 
 };
 
-
+template <class T>
 class treeNode {
 public:
 	//Constructor
-	treeNode(int a);
-	treeNode(int a, bool);
+	treeNode(T a);
+	treeNode(T a, bool);
 
 	//TreeNode operations
 	int findHeight();
-	friend class tree;	
-	friend ostream &operator<<(ostream&, treeNode*);
+	friend class tree<T>;	
+	friend ostream &operator<<(ostream&, treeNode<T>*);
 
 
 private:
 	bool containNum;
-	int val;
-	treeNode* left;
-	treeNode* right;
+	T val;
+	treeNode<T>* left;
+	treeNode<T>* right;
 };
+
+#include "tree.hpp"
+#include "print_tree.hpp"
+#include "printTreeRot.hpp"
+#include "avlBalance.hpp"
