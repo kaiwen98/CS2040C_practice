@@ -11,23 +11,36 @@ int main() {
 	tree t1;
 	queue<int> q1;
 
-	testQueue(&q1);
-	test(q1);
+	//int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	//int arr[10] = { 7,3,11,1,5,0,2,4,6 };
+	int arr[11] = { 0,7,14,21,28,35,42,49,56,63,70 };
 
-	int arr[16] = { 7,3,11,1,5,9,13,0,2,4,6,8,10,12,14};
-	testTree(&t1, arr, 16);
-
-	t1.reverseOrderTrasversal();
+	//int arr[15] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+	testTree(&t1, arr, 7);
+	//t1.reverseOrderTrasversal();
 
 	cout << endl << endl;
 	t1.printTreeRot(true);
 	cout << endl << endl;
 	t1.printTree();
-	int num = 69;
-	cout << num;  (t1.exist(num) == true) ? cout << " exists" << endl : cout << " do not exist" << endl;
+	cout << endl << endl;
+	//int num = 14;
+	//cout << num;  (t1.exist(num) == true) ? cout << " exists" << endl : cout << " do not exist" << endl;
+	for (int i = 1; i <= 7; i++) {
+		int num = 10 * (i - 1);
+		cout << "Successor of " << num << " is " << t1.findSuccessor(num) << endl;
+	}
 	
 
-	cout << "Lowest val is " << t1.findLowestVal(t1.root) << endl;
+	t1.avlBalance();
+	//t1.avlBalance();
+	cout << endl << endl;
+	t1.printTree();
+	cout << endl << endl;
+	t1.printTreeRot(true);
+	//t1.inOrderTrasversal();
+
+	//cout << "Lowest val is " << t1.findLowestVal(t1.root) << endl;
 	return 0;
 }
 
@@ -56,7 +69,7 @@ void testTree(tree* t1, int arr[], int size) {
 		cout << arr[i] << endl;
 		t1->insertTreeNode(arr[i]);
 	}
-	cout<<"Lowest val is "<< t1->findLowestVal(t1->root) <<endl;
+	cout<<"Lowest val is "<< t1->findLowestVal() <<endl;
 	cout << "Tree filled!" << endl;
 	t1->inOrderTrasversal();
 	cout << endl;

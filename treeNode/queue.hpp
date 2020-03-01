@@ -8,6 +8,7 @@ using namespace std;
 
 template <class T>
 void queue<T>::push_to_back(T a){
+	//Case 1: if the queue do not have any queueNodes such that head is empty
 	if (size == 0) head = new queueNode<T>(a);
 
 	else {
