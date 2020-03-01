@@ -27,28 +27,5 @@ public:
 	queueNode<T>* head;
 	int size;
 };
-/*
-class listNode;
 
-class list{
-public:
-	listNode* head;
-	list() { head = NULL; }
-	~list() { while (head != NULL) pop_from_front(); }
-	void printList();
-	void push_to_front(int);
-	void pop_from_front();
-	int size;
-};
-
-class listNode {
-public:
-	int item;
-	listNode* next;
-	listNode(int a) {
-		item = a;
-		next = NULL;
-	}
-};
-*/
 #include "queue.hpp"
