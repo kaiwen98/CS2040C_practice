@@ -44,5 +44,4 @@ void queue<T>::printQueue() {
 	cout << endl;
 }
 
-
 #endif
