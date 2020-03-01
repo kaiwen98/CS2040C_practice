@@ -3,19 +3,19 @@
 #include "queue.h"
 
 using namespace std;
-void testTree(tree<int>* t1, int[], int size);
+void testTree(tree<char>* t1, char[], int size);
 void test(queue<int> &q1);
 void testQueue(queue<int>* q1);
 
 int main() {
-	tree<int> t1;
+	tree<char> t1;
 
 	//int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
 	//int arr[10] = { 7,3,11,1,5,0,2,4,6 };
-	int arr[11] = { 0,7,14,21,28,35,42,49,56,63,70 };
-
+	//int arr[11] = { 0,7,14,21,28,35,42,49,56,63,70 };
+	char arr[15] = { 'a','b','c','d','e','f','g','i','j','k','l' };
 	//int arr[15] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
-	testTree(&t1, arr, 7);
+	testTree(&t1, arr, 6);
 	//t1.reverseOrderTrasversal();
 
 	cout << endl << endl;
@@ -63,7 +63,7 @@ void test(queue<int> &q1) {
 	return;
 }
 
-void testTree(tree<int>* t1, int arr[], int size) {
+void testTree(tree<char>* t1, char arr[], int size) {
 	for (int i = 0; i< size; i++) {
 		cout << arr[i] << endl;
 		t1->insertTreeNode(arr[i]);

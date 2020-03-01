@@ -99,8 +99,8 @@ void tree<T>::printTreeFromQueue(queue<treeNode<T>*>* q1) {
 
 			//If node contains a number, print number in 2 digits (spacing)
 			if (qptr->val->containNum == true) {
-				((qptr->val->val) / 10 == 0) ? cout << "0" : cout << "";
-				cout << qptr->val << "";
+				((qptr->val->val) / 10 == 0) ? cout << "0" : cout << " ";
+				cout << qptr->val->val << "";
 			}
 			//Else, print space
 			else cout << "  ";

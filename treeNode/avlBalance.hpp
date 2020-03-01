@@ -15,6 +15,7 @@ treeNode<T>* tree<T>::avlBalance(treeNode<T>* node) {
 		node->right = avlBalance(node->right);
 	}
 
+	printTree();
 	//Assign new root to new BST
 	if (node->findHeight() == findTreeHeight()) {
 		root = balanceNode(node);

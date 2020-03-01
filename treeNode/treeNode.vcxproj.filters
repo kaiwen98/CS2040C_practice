@@ -41,13 +41,5 @@
     <ClInclude Include="avlBalance.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ostream.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream">
-      <Filter>Header Files</Filter>
-    </None>
   </ItemGroup>
 </Project>

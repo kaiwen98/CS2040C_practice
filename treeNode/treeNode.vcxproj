@@ -127,16 +127,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="avlBalance.hpp" />
-    <ClInclude Include="ostream.h" />
     <ClInclude Include="printTreeRot.hpp" />
     <ClInclude Include="print_tree.hpp" />
     <ClInclude Include="queue.h" />
     <ClInclude Include="queue.hpp" />
     <ClInclude Include="tree.h" />
     <ClInclude Include="tree.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
